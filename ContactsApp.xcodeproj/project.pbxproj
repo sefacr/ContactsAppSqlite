@@ -16,6 +16,7 @@
 		E6982C732BEA6A740020EE9B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982C722BEA6A740020EE9B /* RegisterViewController.swift */; };
 		E6982C752BEA6A9C0020EE9B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982C742BEA6A9C0020EE9B /* DetailViewController.swift */; };
 		E6982C782BEA76C90020EE9B /* Kisiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982C772BEA76C90020EE9B /* Kisiler.swift */; };
+		E6982C7B2BECE0160020EE9B /* PersonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982C7A2BECE0160020EE9B /* PersonsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E6982C722BEA6A740020EE9B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E6982C742BEA6A9C0020EE9B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E6982C772BEA76C90020EE9B /* Kisiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kisiler.swift; sourceTree = "<group>"; };
+		E6982C7A2BECE0160020EE9B /* PersonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		E6982C702BEA69580020EE9B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E6982C792BECDFEC0020EE9B /* TableView */,
 				E6982C712BEA696E0020EE9B /* Views */,
 			);
 			path = UI;
@@ -106,6 +109,14 @@
 				E6982C772BEA76C90020EE9B /* Kisiler.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		E6982C792BECDFEC0020EE9B /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				E6982C7A2BECE0160020EE9B /* PersonsTableViewCell.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 				E6982C5E2BEA49150020EE9B /* SceneDelegate.swift in Sources */,
 				E6982C732BEA6A740020EE9B /* RegisterViewController.swift in Sources */,
 				E6982C782BEA76C90020EE9B /* Kisiler.swift in Sources */,
+				E6982C7B2BECE0160020EE9B /* PersonsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
