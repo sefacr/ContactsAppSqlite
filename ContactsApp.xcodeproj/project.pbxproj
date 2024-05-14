@@ -17,6 +17,12 @@
 		E6982C752BEA6A9C0020EE9B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982C742BEA6A9C0020EE9B /* DetailViewController.swift */; };
 		E6982C782BEA76C90020EE9B /* Kisiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982C772BEA76C90020EE9B /* Kisiler.swift */; };
 		E6982C7B2BECE0160020EE9B /* PersonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982C7A2BECE0160020EE9B /* PersonsTableViewCell.swift */; };
+		E6982CCF2BF35F550020EE9B /* KisilerDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982CCE2BF35F550020EE9B /* KisilerDaoRepository.swift */; };
+		E6982CD22BF360640020EE9B /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982CD12BF360640020EE9B /* MainScreenViewModel.swift */; };
+		E6982CD42BF376EB0020EE9B /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982CD32BF376EB0020EE9B /* RegisterViewModel.swift */; };
+		E6982CD62BF377030020EE9B /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982CD52BF377030020EE9B /* DetailViewModel.swift */; };
+		E6982CD92BF37D2D0020EE9B /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = E6982CD82BF37D2D0020EE9B /* RxBlocking-Dynamic */; };
+		E6982CDB2BF37D2D0020EE9B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E6982CDA2BF37D2D0020EE9B /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,10 @@
 		E6982C742BEA6A9C0020EE9B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E6982C772BEA76C90020EE9B /* Kisiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kisiler.swift; sourceTree = "<group>"; };
 		E6982C7A2BECE0160020EE9B /* PersonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsTableViewCell.swift; sourceTree = "<group>"; };
+		E6982CCE2BF35F550020EE9B /* KisilerDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerDaoRepository.swift; sourceTree = "<group>"; };
+		E6982CD12BF360640020EE9B /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		E6982CD32BF376EB0020EE9B /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		E6982CD52BF377030020EE9B /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6982CDB2BF37D2D0020EE9B /* RxSwift in Frameworks */,
+				E6982CD92BF37D2D0020EE9B /* RxBlocking-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +91,7 @@
 		E6982C6F2BEA694B0020EE9B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E6982CCD2BF35F360020EE9B /* Repository */,
 				E6982C762BEA76860020EE9B /* Entity */,
 			);
 			path = Data;
@@ -87,6 +100,7 @@
 		E6982C702BEA69580020EE9B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E6982CD02BF360390020EE9B /* ViewModel */,
 				E6982C792BECDFEC0020EE9B /* TableView */,
 				E6982C712BEA696E0020EE9B /* Views */,
 			);
@@ -119,6 +133,24 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		E6982CCD2BF35F360020EE9B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E6982CCE2BF35F550020EE9B /* KisilerDaoRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		E6982CD02BF360390020EE9B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E6982CD12BF360640020EE9B /* MainScreenViewModel.swift */,
+				E6982CD32BF376EB0020EE9B /* RegisterViewModel.swift */,
+				E6982CD52BF377030020EE9B /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +167,10 @@
 			dependencies = (
 			);
 			name = ContactsApp;
+			packageProductDependencies = (
+				E6982CD82BF37D2D0020EE9B /* RxBlocking-Dynamic */,
+				E6982CDA2BF37D2D0020EE9B /* RxSwift */,
+			);
 			productName = ContactsApp;
 			productReference = E6982C582BEA49150020EE9B /* ContactsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +199,9 @@
 				Base,
 			);
 			mainGroup = E6982C4F2BEA49150020EE9B;
+			packageReferences = (
+				E6982CD72BF37D2D0020EE9B /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = E6982C592BEA49150020EE9B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -191,11 +230,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6982C602BEA49150020EE9B /* MainScreen.swift in Sources */,
+				E6982CD42BF376EB0020EE9B /* RegisterViewModel.swift in Sources */,
 				E6982C5C2BEA49150020EE9B /* AppDelegate.swift in Sources */,
 				E6982C752BEA6A9C0020EE9B /* DetailViewController.swift in Sources */,
 				E6982C5E2BEA49150020EE9B /* SceneDelegate.swift in Sources */,
+				E6982CCF2BF35F550020EE9B /* KisilerDaoRepository.swift in Sources */,
+				E6982CD22BF360640020EE9B /* MainScreenViewModel.swift in Sources */,
 				E6982C732BEA6A740020EE9B /* RegisterViewController.swift in Sources */,
 				E6982C782BEA76C90020EE9B /* Kisiler.swift in Sources */,
+				E6982CD62BF377030020EE9B /* DetailViewModel.swift in Sources */,
 				E6982C7B2BECE0160020EE9B /* PersonsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +462,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E6982CD72BF37D2D0020EE9B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E6982CD82BF37D2D0020EE9B /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6982CD72BF37D2D0020EE9B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		E6982CDA2BF37D2D0020EE9B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6982CD72BF37D2D0020EE9B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E6982C502BEA49150020EE9B /* Project object */;
 }

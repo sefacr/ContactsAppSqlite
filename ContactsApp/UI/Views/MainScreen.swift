@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class MainScreen: UIViewController {
 
@@ -13,6 +14,7 @@ class MainScreen: UIViewController {
     @IBOutlet weak var personsTableView: UITableView!
     
     var PersonList = [Kisiler]()
+    var viewModel = MainScreenViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,18 +22,16 @@ class MainScreen: UIViewController {
         personsTableView.delegate = self
         personsTableView.dataSource = self
         
-        
-        let k1 = Kisiler(kisi_id: 1, kisi_ad: "ali", kisi_tel: "1111")
-        let k2 = Kisiler(kisi_id: 2, kisi_ad: "sef", kisi_tel: "2432")
-        let k3 = Kisiler(kisi_id: 3, kisi_ad: "esm", kisi_tel: "2432")
-        PersonList.append(k1)
-        PersonList.append(k2)
-        PersonList.append(k3)
+        _ = viewModel.contactsList.subscribe(onNext: { list in
+            self.PersonList = list
+            self.personsTableView.reloadData()
+        })
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         print("anasayfaya dönüldü, sayfa ilk açıldığı an çalışır")
+        viewModel.uploadContacts()
     }
 
     
@@ -50,7 +50,7 @@ class MainScreen: UIViewController {
 
 extension MainScreen : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Kişi Ara:\(searchText)")
+        viewModel.search(searchText: searchText)
     }
 }
 
@@ -85,7 +85,7 @@ extension MainScreen : UITableViewDelegate, UITableViewDataSource {
             alert.addAction(cancelBtn)
             let deleteBtn = UIAlertAction(title: "Delete Contact", style: .destructive) {
                 action in
-                print("Kişi Sil : \(person.kisi_id!)")
+                self.viewModel.delete(personId: person.kisi_id!)
             }
             alert.addAction(deleteBtn)
             

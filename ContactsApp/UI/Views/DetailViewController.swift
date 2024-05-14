@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
     var person: Kisiler?
+    var viewModel = DetailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +26,8 @@ class DetailViewController: UIViewController {
     
     @IBAction func updateBtnClicked(_ sender: Any) {
         if let name = nameTextField.text, let phoneNumber = phoneNumberTextField.text, let k = person {
-            update(kisi_id: k.kisi_id!, kisi_ad: name, kisi_tel: phoneNumber)
+            viewModel.update(kisi_id: k.kisi_id!, kisi_ad: name, kisi_tel: phoneNumber)
         }
     }
     
-    
-    func update(kisi_id: Int, kisi_ad: String, kisi_tel: String){
-        print("Kişi Güncelle : \(kisi_id) - \(kisi_ad) - \(kisi_tel)")
-    }
 }
