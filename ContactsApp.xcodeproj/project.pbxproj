@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E68436FA2BF619AF00AB1C62 /* FMDB in Frameworks */ = {isa = PBXBuildFile; productRef = E68436F92BF619AF00AB1C62 /* FMDB */; };
+		E68436FC2BF61E3200AB1C62 /* contact.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = E68436FB2BF61E3200AB1C62 /* contact.sqlite */; };
 		E6982C5C2BEA49150020EE9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982C5B2BEA49150020EE9B /* AppDelegate.swift */; };
 		E6982C5E2BEA49150020EE9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982C5D2BEA49150020EE9B /* SceneDelegate.swift */; };
 		E6982C602BEA49150020EE9B /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6982C5F2BEA49150020EE9B /* MainScreen.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E68436F72BF6137C00AB1C62 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		E68436FB2BF61E3200AB1C62 /* contact.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = contact.sqlite; sourceTree = "<group>"; };
 		E6982C582BEA49150020EE9B /* ContactsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6982C5B2BEA49150020EE9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6982C5D2BEA49150020EE9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6982CDB2BF37D2D0020EE9B /* RxSwift in Frameworks */,
+				E68436FA2BF619AF00AB1C62 /* FMDB in Frameworks */,
 				E6982CD92BF37D2D0020EE9B /* RxBlocking-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,11 +62,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E68436F62BF6137C00AB1C62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E68436F72BF6137C00AB1C62 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E6982C4F2BEA49150020EE9B = {
 			isa = PBXGroup;
 			children = (
 				E6982C5A2BEA49150020EE9B /* ContactsApp */,
 				E6982C592BEA49150020EE9B /* Products */,
+				E68436F62BF6137C00AB1C62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +98,7 @@
 				E6982C642BEA49160020EE9B /* Assets.xcassets */,
 				E6982C662BEA49160020EE9B /* LaunchScreen.storyboard */,
 				E6982C692BEA49160020EE9B /* Info.plist */,
+				E68436FB2BF61E3200AB1C62 /* contact.sqlite */,
 			);
 			path = ContactsApp;
 			sourceTree = "<group>";
@@ -170,6 +185,7 @@
 			packageProductDependencies = (
 				E6982CD82BF37D2D0020EE9B /* RxBlocking-Dynamic */,
 				E6982CDA2BF37D2D0020EE9B /* RxSwift */,
+				E68436F92BF619AF00AB1C62 /* FMDB */,
 			);
 			productName = ContactsApp;
 			productReference = E6982C582BEA49150020EE9B /* ContactsApp.app */;
@@ -201,6 +217,7 @@
 			mainGroup = E6982C4F2BEA49150020EE9B;
 			packageReferences = (
 				E6982CD72BF37D2D0020EE9B /* XCRemoteSwiftPackageReference "RxSwift" */,
+				E68436F82BF619AF00AB1C62 /* XCRemoteSwiftPackageReference "fmdb" */,
 			);
 			productRefGroup = E6982C592BEA49150020EE9B /* Products */;
 			projectDirPath = "";
@@ -218,6 +235,7 @@
 			files = (
 				E6982C682BEA49160020EE9B /* LaunchScreen.storyboard in Resources */,
 				E6982C652BEA49160020EE9B /* Assets.xcassets in Resources */,
+				E68436FC2BF61E3200AB1C62 /* contact.sqlite in Resources */,
 				E6982C632BEA49150020EE9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +482,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E68436F82BF619AF00AB1C62 /* XCRemoteSwiftPackageReference "fmdb" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ccgus/fmdb";
+			requirement = {
+				kind = exactVersion;
+				version = 2.7.10;
+			};
+		};
 		E6982CD72BF37D2D0020EE9B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -475,6 +501,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E68436F92BF619AF00AB1C62 /* FMDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E68436F82BF619AF00AB1C62 /* XCRemoteSwiftPackageReference "fmdb" */;
+			productName = FMDB;
+		};
 		E6982CD82BF37D2D0020EE9B /* RxBlocking-Dynamic */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E6982CD72BF37D2D0020EE9B /* XCRemoteSwiftPackageReference "RxSwift" */;

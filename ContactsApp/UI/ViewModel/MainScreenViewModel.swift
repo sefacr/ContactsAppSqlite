@@ -13,7 +13,8 @@ class MainScreenViewModel {
     var krepo = KisilerDaoRepository()
     var contactsList = BehaviorSubject<[Kisiler]>(value: [Kisiler]())
     
-    init(){
+    init(){//MainScreenViewModelden nesne oluşursa bu method çalışır
+        krepo.veritabanıKopyala()
         contactsList = krepo.contactsList
     }
     
